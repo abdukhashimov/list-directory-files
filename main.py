@@ -10,5 +10,6 @@ for (dirpath, dirnames, filenames) in os.walk('./serials'):
         else:
             list_of_files[dir_name]=[filename]
 
-print(list_of_files)
-print(json.dumps(list_of_files, indent=2))
+json_output = json.dumps(list_of_files, indent=2)
+with open('output.json', 'w') as writer:
+    writer.write(json_output)
