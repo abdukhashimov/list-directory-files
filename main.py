@@ -1,4 +1,5 @@
 import os
+import json
 
 list_of_files = {}
 for (dirpath, dirnames, filenames) in os.walk('./serials'):
@@ -10,3 +11,4 @@ for (dirpath, dirnames, filenames) in os.walk('./serials'):
             list_of_files[dir_name]=[filename]
 
 print(list_of_files)
+print(json.dumps(list_of_files, indent=2))
